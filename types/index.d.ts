@@ -140,6 +140,7 @@ declare interface CreditCardProps {
   account: Account;
   userName: string;
   showBalance?: boolean;
+  imgURL: "firstBg" | "secondBg";
 }
 
 declare interface BankInfoProps {
