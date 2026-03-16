@@ -13,6 +13,7 @@ import { sidebarLinks } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Footer from "./Footer";
 
 export default function MobileNav({ user }: MobileNavProps) {
     const pathname = usePathname();
@@ -30,22 +31,24 @@ export default function MobileNav({ user }: MobileNavProps) {
                 </SheetTrigger>
                 <SheetContent side="left" className="bg-white border-none">
                     <SheetHeader>
-                        <nav className="flex flex-col gap-2">
-                            <Link
-                                href="/"
-                                className="flex items-center gap-2.5 mb-5 cursor-pointer"
-                            >
-                                <Image
-                                    src="/icons/logo.svg"
-                                    alt="ABank logo"
-                                    width={24}
-                                    height={24}
-                                    className="size-10 lg:size-12"
-                                />
-                                <SheetTitle className="2xl:text-26 font-ibm-plex-serif text-[26px] font-bold text-black-1">
-                                    AKBank
-                                </SheetTitle>
-                            </Link>
+                        <Link
+                            href="/"
+                            className="flex items-center gap-2.5 cursor-pointer"
+                        >
+                            <Image
+                                src="/icons/logo.svg"
+                                alt="ABank logo"
+                                width={24}
+                                height={24}
+                                className="size-10 lg:size-12"
+                            />
+                            <SheetTitle className="2xl:text-26 font-ibm-plex-serif text-[26px] font-bold text-black-1">
+                                AKBank
+                            </SheetTitle>
+                        </Link>
+                    </SheetHeader>
+                    <div className="flex flex-col justify-between h-full">
+                        <nav className="flex flex-col gap-2 px-4 h-full">
                             {sidebarLinks.map((item) => {
                                 const isActive =
                                     item.route === pathname ? true : false;
@@ -53,9 +56,10 @@ export default function MobileNav({ user }: MobileNavProps) {
                                     <Link
                                         href={item.route}
                                         key={item.label}
-                                        className={`flex gap-3 items-center p-2.5 2xl:p-4 rounded-lg xl:justify-start${isActive ? " bg-bank-gradient" : ""}`}
+                                        className={`flex gap-3 items-center p-2.5 2xl:p-4 rounded-lg ${isActive ? " bg-bank-gradient" : ""}`}
                                     >
-                                        <Image
+                                        <SheetClose className="flex gap-3 items-center">
+                                            <Image
                                             src={item.imgURL}
                                             alt={item.label}
                                             width={20}
@@ -67,14 +71,18 @@ export default function MobileNav({ user }: MobileNavProps) {
                                         >
                                             {item.label}
                                         </div>
+                                        </SheetClose>
+                                        
                                     </Link>
                                 );
                             })}
+                            <Footer user={user}/>
                         </nav>
-                    </SheetHeader>
+                        
+                    </div>
                 </SheetContent>
             </Sheet>
-            <div className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2">
                 <Image
                     src="/icons/logo.svg"
                     alt="logo"
@@ -82,7 +90,7 @@ export default function MobileNav({ user }: MobileNavProps) {
                     height={30}
                 />
                 <h1 className="text-16 font-bold">AKBank</h1>
-            </div>
+            </Link>
             <div></div>
         </div>
     );

@@ -14,11 +14,6 @@ export const sidebarLinks = [
     route: "/transaction-history",
     label: "Transaction History",
   },
-  {
-    imgURL: "/icons/money-send.svg",
-    route: "/payment-transfer",
-    label: "Transfer Funds",
-  },
 ];
 
 // good_user / good_password - Bank of America
@@ -92,46 +87,37 @@ export const topCategoryStyles = {
 };
 
 export const transactionCategoryStyles = {
-  "Food and Drink": {
-    borderColor: "border-pink-600",
-    backgroundColor: "bg-pink-500",
-    textColor: "text-pink-700",
-    chipBackgroundColor: "bg-inherit",
+  Food: {
+    borderColor: "border-yellow-400",
+    backgroundColor: "bg-yellow-400",
+    color: "text-yellow-400",
+    chipBackgroundColor: "bg-yellow-50",
   },
-  Payment: {
+  Salary: {
     borderColor: "border-success-600",
     backgroundColor: "bg-green-600",
-    textColor: "text-success-700",
+    color: "text-success-700",
     chipBackgroundColor: "bg-inherit",
   },
-  "Bank Fees": {
-    borderColor: "border-success-600",
-    backgroundColor: "bg-green-600",
-    textColor: "text-success-700",
-    chipBackgroundColor: "bg-inherit",
-  },
-  Transfer: {
+  Transport: {
     borderColor: "border-red-700",
     backgroundColor: "bg-red-700",
-    textColor: "text-red-700",
+    color: "text-red-700",
     chipBackgroundColor: "bg-inherit",
   },
-  Processing: {
-    borderColor: "border-[#F2F4F7]",
+  Shopping: {
+    borderColor: "border-fuchsia-900",
+    backgroundColor: "bg-fuchsia-900",
+    color: "text-fuchsia-900",
+    chipBackgroundColor: "bg-fuchsia-50",
+  },
+  Other: {
+    borderColor: "border-gray-500",
     backgroundColor: "bg-gray-500",
-    textColor: "text-[#344054]",
-    chipBackgroundColor: "bg-[#F2F4F7]",
+    color: "text-gray-500",
+    chipBackgroundColor: "bg-gray-50",
   },
-  Success: {
-    borderColor: "border-[#12B76A]",
-    backgroundColor: "bg-[#12B76A]",
-    textColor: "text-[#027A48]",
-    chipBackgroundColor: "bg-[#ECFDF3]",
-  },
-  default: {
-    borderColor: "",
-    backgroundColor: "bg-blue-500",
-    textColor: "text-blue-700",
-    chipBackgroundColor: "bg-inherit",
-  },
+
 };
+
+export const categories = ["Food", "Shopping", "Salary", "Transport", "Other"];

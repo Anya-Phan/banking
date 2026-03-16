@@ -5,7 +5,6 @@ export default function AuthLayout({
 }>) {
     return (
         <>
-            form
             {children}
         </>
     );

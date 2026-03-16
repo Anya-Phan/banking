@@ -6,13 +6,21 @@ ChartJS.register(ArcElement, Tooltip);
 
 
 
-export function DoughnutChart({accounts}:DoughnutChartProps) {
+export function DoughnutChart({banks}:DoughnutChartProps) {
+    const options = {
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+    cutout: '70%'
+  };
     const data = {
-    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    labels:  banks.map((bank) => bank.name),
     datasets: [
         {
-            label: "# of Votes",
-            data: [12, 19, 3, 5, 2, 3],
+            label: "Balance",
+            data: banks.map((bank) => bank.balance),
             backgroundColor: [
                 "rgba(255, 99, 132, 0.2)",
                 "rgba(54, 162, 235, 0.2)",
@@ -33,5 +41,5 @@ export function DoughnutChart({accounts}:DoughnutChartProps) {
         },
     ],
 };
-    return <Doughnut data={data} options={{cutout: '70%'}}/>;
+    return <Doughnut data={data} options={options}/>;
 }

@@ -114,7 +114,9 @@ const config = {
         36: ["36px", "44px"],
       },
     },
+    
   },
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
 

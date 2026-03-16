@@ -1,22 +1,22 @@
+"use client"
 import AnimatedCounter from "./AnimatedCounter";
 import { DoughnutChart } from "./DoughnutChart";
 export default function TotalBalanceBox({
     totalBanks,
     totalCurrentBalance,
-    accounts,
+    banks,
 }: TotlaBalanceBoxProps) {
     return (
         <section className="total-balance">
             <div className="total-balance-chart">
-                <DoughnutChart accounts={[]}/>
+                <DoughnutChart banks={banks} />
             </div>
             <div className="flex flex-col gap-6">
                 <h2 className="header-2">Bank Accounts: {totalBanks}</h2>
                 <div className="flex flex-col gap-2">
                     <p className="total-balance-label">Total Current Balance</p>
                     <p className="total-balance-amount">
-                        <AnimatedCounter amount={totalCurrentBalance}/>
-                        
+                        <AnimatedCounter amount={totalCurrentBalance} />
                     </p>
                 </div>
             </div>

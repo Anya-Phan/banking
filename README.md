@@ -1,36 +1,147 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AK Bank - A Fintech Application Demo
 
-## Getting Started
+A modern fintech web application that helps users track personal finances, manage transactions, and visualize spending behavior through dynamic charts.
 
-First, run the development server:
+The application provides an interactive dashboard where financial data is automatically analyzed and updated when new transactions are added.
+
+---
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Tech Stack](#tech-stack)
+- [Features](#features)
+- [Installation](#installation)
+- [Environment Variables](#environment-variables)
+- [Database](#database)
+- [Authentication](#authentication)
+- [Financial Analytics](#financial-analytics)
+- [Future Improvements](#future-improvements)
+- [License](#license)
+
+---
+
+## Introduction
+
+This project is a simple financial management dashboard built to help users monitor their personal finances.
+
+Users can add transactions, organize expenses by category, and analyze spending patterns through charts. Financial data is automatically recalculated when transactions change, providing up-to-date insights into spending behavior.
+
+---
+
+## Tech Stack
+
+- **Next.js** – React framework used to build the web application
+- **Prisma ORM** – Type-safe ORM used to interact with the database
+- **Neon Database** – Serverless PostgreSQL database used to store application data
+- **Appwrite** – Authentication service supporting Email/Password and OAuth login
+
+---
+
+## Features
+
+- User authentication (Email & Password, OAuth)
+- Personal finance dashboard
+- Add/Delete transactions
+- Transaction history
+- Expense and income categories
+- Financial analytics with charts
+- Automatic chart updates when transaction data changes
+- Automatic chart updates when a new bank connects
+- Responsive UI for desktop and mobile
+
+> Note: This project does not include real bank transfer functionality.
+
+---
+
+## Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/Anya-Phan/banking
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env` file in the root directory and add the following variables:
 
-## Learn More
+```env
+NEXT_APPWRITE_KEY=
 
-To learn more about Next.js, take a look at the following resources:
+DATABASE_URL=
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+NEXT_PUBLIC_APPWRITE_PROJECT_ID = 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+NEXT_PUBLIC_APPWRITE_PROJECT_NAME = 
 
-## Deploy on Vercel
+NEXT_PUBLIC_APPWRITE_ENDPOINT =
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Database
+
+The application uses **PostgreSQL hosted on Neon**.
+
+Database schema and queries are managed using **Prisma ORM**.
+
+Run the following command to apply database migrations:
+
+```bash
+npx prisma migrate dev
+```
+
+---
+
+## Authentication
+
+Authentication is handled by **Appwrite**, supporting:
+
+- Email and Password login
+- OAuth login
+
+This allows users to securely access their financial dashboard.
+
+---
+
+## Financial Analytics
+
+The application provides visual insights into spending behavior using charts.
+
+Charts are automatically recalculated when:
+
+- a new transaction is added
+- transaction data is updated
+- a new financial account is connected
+
+This allows users to quickly understand their spending patterns.
+
+---
+
+## Future Improvements
+
+- Bank API integration
+- Money transfer between accounts
+- Budget planning tools
+- Advanced financial reports
+
+---
+
+## License
+
+
