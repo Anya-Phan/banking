@@ -61,7 +61,7 @@ export default function CreditCard({
                     />
                 </div>
 
-                <p className="text-lg my-2">●●●● ●●●● ●●●● {digit}</p>
+                <p className="text-sm sm:text-lg my-2">●●●● ●●●● ●●●● {digit}</p>
                 <div className="mt-auto flex gap-5">
                     <div>
                         <p className="text-10 font-extralight">CARD HOLDER</p>

@@ -129,7 +129,7 @@
 }
 
 .header-2 {
-    @apply text-lg font-semibold text-gray-900;
+    @apply text-14 sm:text-lg font-semibold text-gray-900;
 }
 
 /* Home */
@@ -154,7 +154,7 @@
 }
 
 .total-balance-label {
-    @apply text-sm font-medium text-gray-600;
+    @apply text-xs font-medium text-gray-600;
 }
 
 .total-balance-amount {

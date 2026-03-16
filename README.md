@@ -17,6 +17,7 @@ The application provides an interactive dashboard where financial data is automa
 - [Authentication](#authentication)
 - [Financial Analytics](#financial-analytics)
 - [Future Improvements](#future-improvements)
+- [Test](#test)
 - [License](#license)
 
 ---
@@ -130,6 +131,15 @@ Charts are automatically recalculated when:
 - a new financial account is connected
 
 This allows users to quickly understand their spending patterns.
+
+---
+
+## Test
+
+Visiting my application with with account for demo:
+
+    Email: test123@email.com
+    Password: test2525
 
 ---
 

@@ -14,6 +14,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Footer from "./Footer";
+import NewTransaction from "./NewTransaction";
 
 export default function MobileNav({ user }: MobileNavProps) {
     const pathname = usePathname();
@@ -60,25 +61,24 @@ export default function MobileNav({ user }: MobileNavProps) {
                                     >
                                         <SheetClose className="flex gap-3 items-center">
                                             <Image
-                                            src={item.imgURL}
-                                            alt={item.label}
-                                            width={20}
-                                            height={20}
-                                            className={`${isActive ? "white-filter" : ""}`}
-                                        />
-                                        <div
-                                            className={`${isActive ? " white-filter" : ""}`}
-                                        >
-                                            {item.label}
-                                        </div>
+                                                src={item.imgURL}
+                                                alt={item.label}
+                                                width={20}
+                                                height={20}
+                                                className={`${isActive ? "white-filter" : ""}`}
+                                            />
+                                            <div
+                                                className={`${isActive ? " white-filter" : ""}`}
+                                            >
+                                                {item.label}
+                                            </div>
                                         </SheetClose>
-                                        
                                     </Link>
                                 );
                             })}
-                            <Footer user={user}/>
+                            <NewTransaction/>
+                            <Footer user={user} />
                         </nav>
-                        
                     </div>
                 </SheetContent>
             </Sheet>

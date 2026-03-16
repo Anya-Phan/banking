@@ -10,6 +10,7 @@ export default function AnimatedCounter({amount}: {amount: number}) {
       useEasing={true}
       prefix="$"
       decimals={2}
+      className="text-16 lg:text-4xl"
     />
   );
 }

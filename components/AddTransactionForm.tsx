@@ -156,7 +156,7 @@ export default function AddTransactionForm() {
                     )}
                 />
 
-                <div className="flex gap-2">
+                <div className="flex flex-col sm:flex-row gap-2">
                     <Controller
                         name="category"
                         control={control}
@@ -257,7 +257,7 @@ export default function AddTransactionForm() {
                 </DialogClose>
                 <Button
                     type="submit"
-                    className="form-btn"
+                    className="text-base rounded-lg border border-bankGradient bg-bank-gradient font-semibold text-white shadow-form hover:scale-110 cursor-pointer flex"
                     disabled={isSubmitting}
                 >
                     {isSubmitting ? (

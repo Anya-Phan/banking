@@ -34,7 +34,7 @@ export default function AddBankForm() {
             .refine((num) => !isNaN(Number(num)) && Number(num) > 0, {
                 message: "Balance must be a number and greater than 0",
             }),
-     
+
         digit: z
             .string()
             .length(4, "Please enter the last 4 digits of your bank account."),
@@ -163,7 +163,7 @@ export default function AddBankForm() {
                 </DialogClose>
                 <Button
                     type="submit"
-                    className="form-btn"
+                    className="text-base rounded-lg border border-bankGradient bg-bank-gradient font-semibold text-white shadow-form hover:scale-110 cursor-pointer flex"
                     disabled={isSubmitting}
                 >
                     {isSubmitting ? (
