@@ -156,7 +156,7 @@ export default function AddBankForm() {
                 <DialogClose asChild>
                     <Button
                         variant="outline"
-                        className="border-gray-300 bg-white"
+                        className="border-gray-300 bg-white cursor-pointer"
                     >
                         Cancel
                     </Button>

@@ -154,7 +154,7 @@
 }
 
 .total-balance-label {
-    @apply text-xs font-medium text-gray-600;
+    @apply text-xs md:text-base lg:text-lg font-medium text-gray-600;
 }
 
 .total-balance-amount {

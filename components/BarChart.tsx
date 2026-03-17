@@ -39,6 +39,10 @@ export function BarChart({ transactions }: BarChartProps) {
                 grid: {
                     display: false,
                 },
+                ticks: {
+                    display: false, // ẩn số trục tung
+                },
+                display: false,
             },
         },
     };
