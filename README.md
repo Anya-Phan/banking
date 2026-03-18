@@ -9,6 +9,7 @@ The application provides an interactive dashboard where financial data is automa
 ## Table of Contents
 
 - [Introduction](#introduction)
+- [Test](#test)
 - [Tech Stack](#tech-stack)
 - [Features](#features)
 - [Installation](#installation)
@@ -17,7 +18,6 @@ The application provides an interactive dashboard where financial data is automa
 - [Authentication](#authentication)
 - [Financial Analytics](#financial-analytics)
 - [Future Improvements](#future-improvements)
-- [Test](#test)
 - [License](#license)
 
 ---
@@ -27,6 +27,14 @@ The application provides an interactive dashboard where financial data is automa
 This project is a simple financial management dashboard built to help users monitor their personal finances.
 
 Users can add transactions, organize expenses by category, and analyze spending patterns through charts. Financial data is automatically recalculated when transactions change, providing up-to-date insights into spending behavior.
+
+---
+## Test
+
+Visiting my application with with account for demo:
+
+    Email: test123@email.com
+    Password: test2525
 
 ---
 
@@ -131,15 +139,6 @@ Charts are automatically recalculated when:
 - a new financial account is connected
 
 This allows users to quickly understand their spending patterns.
-
----
-
-## Test
-
-Visiting my application with with account for demo:
-
-    Email: test123@email.com
-    Password: test2525
 
 ---
 
